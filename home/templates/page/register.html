@@ -1,0 +1,16 @@
+{% extends "page/header.html" %}
+
+{% block title %}
+	Đăng Ký Tài Khoản
+{% endblock title %}
+
+{% block content %}
+	<center>
+		<form action="." method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" name="" value="Đăng ký">
+	</form>
+	</center>
+	
+{% endblock content %}

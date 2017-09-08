@@ -1,0 +1,14 @@
+{% extends "page/header.html" %}
+{% block title %}Trang Chủ{% endblock title %}
+
+{% block content %}
+	<div class="container-fluid">
+			{%for Index in indexs %}
+			<center>
+				<img src="{{Index.image.url}}" width="500px" height="400 px">
+			</center>
+				<h4>{{Index.body|safe|linebreaks}}</h4>
+			{%endfor%}
+		
+	</div>
+{% endblock content %}
